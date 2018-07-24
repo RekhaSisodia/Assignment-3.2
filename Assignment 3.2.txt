@@ -1,0 +1,36 @@
+Assignment 3.2
+
+Ques1. Obtain the elements of the union between two character vectors.
+       vec1=c(rownames(mtcars[1:15,]))
+       vec2=c(rownames(mtcars[10:32,]))
+     vec1                             # this will display the 1to 15 elements.
+     vec2                             # this will display the 10 to 32 elements.
+     newvec<-union(vec1,vec2)         # will use the union function on vec1 and vec2 and will store result in vec, this will give the elements of vec1 and vec2 without repeating them.
+     newvec
+
+Ques 2. Get those elements that are common to both vectors.
+        vec1=c(rownames(mtcars[1:15,]))
+        vec2=c(rownames(mtcars[10:32,]))
+   cvector<-vec1%in%vec2         # will give the common elements of vec1 and vec2
+
+Ques 3. Get the difference of the elements between two character vectors.
+        vec1=c(rownames(mtcars[1:15,]))
+        vec2=c(rownames(mtcars[10:32,]))
+        vec1[!vec1%in%vec2]                                   #this will display the elements of vec1 which are not present in vec2
+        vec2[!vec2%in%vec1]                                   #this will display the elements of vec2 which are not present in vec1
+union(vec1[!vec1%in%vec2],vec2[!vec2%in%vec1])                #this will display those elements that are not common in vec1 and vec2
+
+
+Ques 4. Test the quality of the two character vectors.
+        vec1=c(rownames(mtcars[1:15,]))
+        vec2=c(rownames(mtcars[11:25,]))
+        vec1 %in% vec2
+        identical(vec1,vec2)    # whether vec1 and vec2 are identical
+        
+ 
+
+   
+   
+         
+
+     
